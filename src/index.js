@@ -1,11 +1,13 @@
 
 module.exports = function towelSort (matrix) {
-  if (matrix == undefined){
+  if (matrix === undefined){
     return [];
-  }
-  for(let i = 1;i<matrix.length;i+2){
+  }else if(matrix.length>0){
+  for(let i = 1;i<matrix.length;i++){
     matrix[i] = matrix[i].sort((a, b) => b - a);
+    i++;
   }
+}
   return matrix.flat();
 }
 
